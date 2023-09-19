@@ -5,7 +5,7 @@ val buildSettings = Seq[Setting[_]](
   organizationName := "MessagePack",
   organizationHomepage := Some(new URL("http://msgpack.org/")),
   description := "MessagePack for Java",
-  scalaVersion := "2.12.8",
+  scalaVersion := "2.12.15",
   logBuffered in Test := false,
   // msgpack-java should be a pure-java library, so remove Scala specific configurations
   autoScalaLibrary := false,
@@ -17,10 +17,10 @@ val buildSettings = Seq[Setting[_]](
   // JVM options for building
   scalacOptions ++= Seq("-encoding", "UTF-8", "-deprecation", "-unchecked", "-feature"),
   javaOptions in Test ++= Seq("-ea"),
-  javacOptions in (Compile, compile) ++= Seq("-encoding", "UTF-8", "-Xlint:unchecked", "-Xlint:deprecation", "-source", "1.7", "-target", "1.7"),
+  javacOptions in (Compile, compile) ++= Seq("-encoding", "UTF-8", "-Xlint:unchecked", "-Xlint:deprecation", "-source", "17", "-target", "17"),
   // Use lenient validation mode when generating Javadoc (for Java8)
   javacOptions in doc := {
-    val opts = Seq("-source", "1.7")
+    val opts = Seq("-source", "17")
     if (scala.util.Properties.isJavaAtLeast("1.8")) {
       opts ++ Seq("-Xdoclint:none")
     } else {
