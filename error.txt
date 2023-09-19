@@ -1,0 +1,209 @@
+[info] welcome to sbt 1.6.0-RC1 (OpenJDK BSD Porting Team Java 17.0.7)
+[info] loading settings for project msgpack-java-build from plugins.sbt ...
+[info] loading project definition from /usr/home/declanlee98/msgpack2/msgpack-java/project
+[info] loading settings for project msgpack-java from build.sbt,sonatype.sbt,version.sbt ...
+[info] set current project to msgpack-java (in build file:/usr/home/declanlee98/msgpack2/msgpack-java/)
+[warn] there are 2 keys that are not used by any other settings/tasks:
+[warn]  
+[warn] * msgpack-java / findbugsReportPath
+[warn]   +- /usr/home/declanlee98/msgpack2/msgpack-java/build.sbt:55
+[warn] * msgpack-java / findbugsReportType
+[warn]   +- /usr/home/declanlee98/msgpack2/msgpack-java/build.sbt:54
+[warn]  
+[warn] note: a setting might still be used by a command; to exclude a key from this `lintUnused` check
+[warn] either append it to `Global / excludeLintKeys` or call .withRank(KeyRanks.Invisible) on the key
+[info] Running checkstyle: src/test/java
+[info] Running checkstyle: src/test/java
+[info] Using checkstyle configuration: facebook
+[info] Running checkstyle: src/main/java
+[info] Using checkstyle configuration: facebook
+[info] Using checkstyle configuration: facebook
+[info] Running checkstyle: src/test/java
+[info] Using checkstyle configuration: facebook
+[info] Running checkstyle: src/main/java
+[info] Using checkstyle configuration: facebook
+[info] Running checkstyle: src/main/java
+[info] Using checkstyle configuration: facebook
+[info] checkstyle has succeeded
+[info] checkstyle has succeeded
+[info] checkstyle has succeeded
+[info] checkstyle has succeeded
+[info] checkstyle has succeeded
+[info] Instrumenting 0 classes to /usr/home/declanlee98/msgpack2/msgpack-java/target/jacoco/instrumented-classes
+[warn] javaOptions will be ignored, fork is set to false
+[info] checkstyle has succeeded
+[info] Instrumenting 23 classes to /usr/home/declanlee98/msgpack2/msgpack-java/msgpack-jackson/target/jacoco/instrumented-classes
+[info] Instrumenting 98 classes to /usr/home/declanlee98/msgpack2/msgpack-java/msgpack-core/target/jacoco/instrumented-classes
+[error] java.io.IOException: Error while instrumenting class Preconditions.class.
+[error] 	at org.jacoco.core.instr.Instrumenter.instrumentError(Instrumenter.java:166)
+[error] 	at org.jacoco.core.instr.Instrumenter.instrument(Instrumenter.java:117)
+[error] 	at org.jacoco.core.instr.Instrumenter.instrument(Instrumenter.java:136)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$11(InstrumentationUtils.scala:64)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$11$adapted(InstrumentationUtils.scala:61)
+[error] 	at resource.AbstractManagedResource.$anonfun$acquireFor$1(AbstractManagedResource.scala:88)
+[error] 	at scala.util.control.Exception$Catch.$anonfun$either$1(Exception.scala:252)
+[error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:228)
+[error] 	at scala.util.control.Exception$Catch.either(Exception.scala:252)
+[error] 	at resource.AbstractManagedResource.acquireFor(AbstractManagedResource.scala:88)
+[error] 	at resource.ManagedResourceOperations.apply(ManagedResourceOperations.scala:26)
+[error] 	at resource.ManagedResourceOperations.apply$(ManagedResourceOperations.scala:26)
+[error] 	at resource.AbstractManagedResource.apply(AbstractManagedResource.scala:50)
+[error] 	at resource.ManagedResourceOperations.acquireAndGet(ManagedResourceOperations.scala:25)
+[error] 	at resource.ManagedResourceOperations.acquireAndGet$(ManagedResourceOperations.scala:25)
+[error] 	at resource.AbstractManagedResource.acquireAndGet(AbstractManagedResource.scala:50)
+[error] 	at resource.ManagedResourceOperations.foreach(ManagedResourceOperations.scala:53)
+[error] 	at resource.ManagedResourceOperations.foreach$(ManagedResourceOperations.scala:53)
+[error] 	at resource.AbstractManagedResource.foreach(AbstractManagedResource.scala:50)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$9(InstrumentationUtils.scala:61)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$9$adapted(InstrumentationUtils.scala:60)
+[error] 	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+[error] 	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+[error] 	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.instrumentClasses(InstrumentationUtils.scala:60)
+[error] 	at com.github.sbt.jacoco.BaseJacocoPlugin.$anonfun$taskValues$9(BaseJacocoPlugin.scala:105)
+[error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+[error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)
+[error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:68)
+[error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)
+[error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)
+[error] 	at sbt.Execute.work(Execute.scala:291)
+[error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)
+[error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+[error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)
+[error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[error] 	at java.base/java.lang.Thread.run(Thread.java:833)
+[error] Caused by: java.lang.IllegalArgumentException
+[error] 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185)
+[error] 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168)
+[error] 	at org.jacoco.core.instr.Instrumenter.instrument(Instrumenter.java:114)
+[error] 	at org.jacoco.core.instr.Instrumenter.instrument(Instrumenter.java:136)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$11(InstrumentationUtils.scala:64)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$11$adapted(InstrumentationUtils.scala:61)
+[error] 	at resource.AbstractManagedResource.$anonfun$acquireFor$1(AbstractManagedResource.scala:88)
+[error] 	at scala.util.control.Exception$Catch.$anonfun$either$1(Exception.scala:252)
+[error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:228)
+[error] 	at scala.util.control.Exception$Catch.either(Exception.scala:252)
+[error] 	at resource.AbstractManagedResource.acquireFor(AbstractManagedResource.scala:88)
+[error] 	at resource.ManagedResourceOperations.apply(ManagedResourceOperations.scala:26)
+[error] 	at resource.ManagedResourceOperations.apply$(ManagedResourceOperations.scala:26)
+[error] 	at resource.AbstractManagedResource.apply(AbstractManagedResource.scala:50)
+[error] 	at resource.ManagedResourceOperations.acquireAndGet(ManagedResourceOperations.scala:25)
+[error] 	at resource.ManagedResourceOperations.acquireAndGet$(ManagedResourceOperations.scala:25)
+[error] 	at resource.AbstractManagedResource.acquireAndGet(AbstractManagedResource.scala:50)
+[error] 	at resource.ManagedResourceOperations.foreach(ManagedResourceOperations.scala:53)
+[error] 	at resource.ManagedResourceOperations.foreach$(ManagedResourceOperations.scala:53)
+[error] 	at resource.AbstractManagedResource.foreach(AbstractManagedResource.scala:50)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$9(InstrumentationUtils.scala:61)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$9$adapted(InstrumentationUtils.scala:60)
+[error] 	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+[error] 	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+[error] 	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.instrumentClasses(InstrumentationUtils.scala:60)
+[error] 	at com.github.sbt.jacoco.BaseJacocoPlugin.$anonfun$taskValues$9(BaseJacocoPlugin.scala:105)
+[error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+[error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)
+[error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:68)
+[error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)
+[error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)
+[error] 	at sbt.Execute.work(Execute.scala:291)
+[error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)
+[error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+[error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)
+[error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[error] 	at java.base/java.lang.Thread.run(Thread.java:833)
+[error] java.io.IOException: Error while instrumenting class ExtensionTypeCustomDeserializers$1.class.
+[error] 	at org.jacoco.core.instr.Instrumenter.instrumentError(Instrumenter.java:166)
+[error] 	at org.jacoco.core.instr.Instrumenter.instrument(Instrumenter.java:117)
+[error] 	at org.jacoco.core.instr.Instrumenter.instrument(Instrumenter.java:136)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$11(InstrumentationUtils.scala:64)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$11$adapted(InstrumentationUtils.scala:61)
+[error] 	at resource.AbstractManagedResource.$anonfun$acquireFor$1(AbstractManagedResource.scala:88)
+[error] 	at scala.util.control.Exception$Catch.$anonfun$either$1(Exception.scala:252)
+[error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:228)
+[error] 	at scala.util.control.Exception$Catch.either(Exception.scala:252)
+[error] 	at resource.AbstractManagedResource.acquireFor(AbstractManagedResource.scala:88)
+[error] 	at resource.ManagedResourceOperations.apply(ManagedResourceOperations.scala:26)
+[error] 	at resource.ManagedResourceOperations.apply$(ManagedResourceOperations.scala:26)
+[error] 	at resource.AbstractManagedResource.apply(AbstractManagedResource.scala:50)
+[error] 	at resource.ManagedResourceOperations.acquireAndGet(ManagedResourceOperations.scala:25)
+[error] 	at resource.ManagedResourceOperations.acquireAndGet$(ManagedResourceOperations.scala:25)
+[error] 	at resource.AbstractManagedResource.acquireAndGet(AbstractManagedResource.scala:50)
+[error] 	at resource.ManagedResourceOperations.foreach(ManagedResourceOperations.scala:53)
+[error] 	at resource.ManagedResourceOperations.foreach$(ManagedResourceOperations.scala:53)
+[error] 	at resource.AbstractManagedResource.foreach(AbstractManagedResource.scala:50)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$9(InstrumentationUtils.scala:61)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$9$adapted(InstrumentationUtils.scala:60)
+[error] 	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+[error] 	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+[error] 	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.instrumentClasses(InstrumentationUtils.scala:60)
+[error] 	at com.github.sbt.jacoco.BaseJacocoPlugin.$anonfun$taskValues$9(BaseJacocoPlugin.scala:105)
+[error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+[error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)
+[error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:68)
+[error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)
+[error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)
+[error] 	at sbt.Execute.work(Execute.scala:291)
+[error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)
+[error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+[error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)
+[error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[error] 	at java.base/java.lang.Thread.run(Thread.java:833)
+[error] Caused by: java.lang.IllegalArgumentException
+[error] 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185)
+[error] 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168)
+[error] 	at org.jacoco.core.instr.Instrumenter.instrument(Instrumenter.java:114)
+[error] 	at org.jacoco.core.instr.Instrumenter.instrument(Instrumenter.java:136)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$11(InstrumentationUtils.scala:64)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$11$adapted(InstrumentationUtils.scala:61)
+[error] 	at resource.AbstractManagedResource.$anonfun$acquireFor$1(AbstractManagedResource.scala:88)
+[error] 	at scala.util.control.Exception$Catch.$anonfun$either$1(Exception.scala:252)
+[error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:228)
+[error] 	at scala.util.control.Exception$Catch.either(Exception.scala:252)
+[error] 	at resource.AbstractManagedResource.acquireFor(AbstractManagedResource.scala:88)
+[error] 	at resource.ManagedResourceOperations.apply(ManagedResourceOperations.scala:26)
+[error] 	at resource.ManagedResourceOperations.apply$(ManagedResourceOperations.scala:26)
+[error] 	at resource.AbstractManagedResource.apply(AbstractManagedResource.scala:50)
+[error] 	at resource.ManagedResourceOperations.acquireAndGet(ManagedResourceOperations.scala:25)
+[error] 	at resource.ManagedResourceOperations.acquireAndGet$(ManagedResourceOperations.scala:25)
+[error] 	at resource.AbstractManagedResource.acquireAndGet(AbstractManagedResource.scala:50)
+[error] 	at resource.ManagedResourceOperations.foreach(ManagedResourceOperations.scala:53)
+[error] 	at resource.ManagedResourceOperations.foreach$(ManagedResourceOperations.scala:53)
+[error] 	at resource.AbstractManagedResource.foreach(AbstractManagedResource.scala:50)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$9(InstrumentationUtils.scala:61)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.$anonfun$instrumentClasses$9$adapted(InstrumentationUtils.scala:60)
+[error] 	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+[error] 	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+[error] 	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+[error] 	at com.github.sbt.jacoco.data.InstrumentationUtils$.instrumentClasses(InstrumentationUtils.scala:60)
+[error] 	at com.github.sbt.jacoco.BaseJacocoPlugin.$anonfun$taskValues$9(BaseJacocoPlugin.scala:105)
+[error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+[error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)
+[error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:68)
+[error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)
+[error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)
+[error] 	at sbt.Execute.work(Execute.scala:291)
+[error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)
+[error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+[error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)
+[error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[error] 	at java.base/java.lang.Thread.run(Thread.java:833)
+[error] (msgpack-core / Test / fullClasspath) java.io.IOException: Error while instrumenting class Preconditions.class.
+[error] (msgpack-jackson / Test / fullClasspath) java.io.IOException: Error while instrumenting class ExtensionTypeCustomDeserializers$1.class.
+[error] Total time: 2 s, completed Sep 19, 2023, 10:37:59 AM
