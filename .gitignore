@@ -12,3 +12,5 @@ lib
 .idea
 atlassian-ide-plugin.xml
 .idea/copyright/msgpack.xml
+rsync_stuff.sh
+error.txt

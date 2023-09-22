@@ -185,7 +185,9 @@ public class MessageBuffer
      * Head address of the underlying memory. If base is null, the address is a direct memory address, and if not,
      * it is the relative address within an array object (base)
      */
-    protected final long address;
+//    protected final long adress;
+
+    protected final MemoryAddress address;
 
     /**
      * Size of the underlying memory
@@ -385,7 +387,7 @@ public class MessageBuffer
         }
     }
 
-    protected MessageBuffer(Object base, long address, int length)
+    protected MessageBuffer(Object base, MemoryAddress address, int length)
     {
         this.base = base;
         this.address = address;

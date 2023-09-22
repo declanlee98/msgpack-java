@@ -37,7 +37,7 @@ public class MessageBufferBE
         super(bb);
     }
 
-    private MessageBufferBE(Object base, long address, int length)
+    private MessageBufferBE(Object base, MemoryAddress address, int length)
     {
         super(base, address, length);
     }

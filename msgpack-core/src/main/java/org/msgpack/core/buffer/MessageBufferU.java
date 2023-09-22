@@ -40,7 +40,7 @@ public class MessageBufferU
         this.wrap = bb.slice();
     }
 
-    private MessageBufferU(Object base, long address, int length, ByteBuffer wrap)
+    private MessageBufferU(Object base, MemoryAddress address, int length, ByteBuffer wrap)
     {
         super(base, address, length);
         this.wrap = wrap;
