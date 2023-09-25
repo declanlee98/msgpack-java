@@ -18,6 +18,7 @@ package org.msgpack.core.buffer;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.MemoryAddress;
 import java.nio.ByteBuffer;
 
 /**
@@ -37,6 +38,7 @@ class DirectBufferAccess
     }
 
     static Method mGetAddress;
+    static Method mGetMemoryAddress;
     static Method mCleaner;
     static Method mClean;
 
@@ -92,6 +94,9 @@ class DirectBufferAccess
             mGetAddress = directByteBufferClass.getDeclaredMethod("address");
             mGetAddress.setAccessible(true);
 
+            mGetMemoryAddress = directByteBufferClass.getDeclaredMethod("memoryAddress");
+            mGetMemoryAddress.setAccessible(true);
+
             mCleaner = directByteBufferClass.getDeclaredMethod("cleaner");
             mCleaner.setAccessible(true);
 
@@ -99,6 +104,19 @@ class DirectBufferAccess
             mClean.setAccessible(true);
         }
         catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    static MemoryAddress getMemoryAddress(Object base)
+    {
+        try {
+            return (MemoryAddress) mGetMemoryAddress.invoke(base);
+        }
+        catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+        catch (InvocationTargetException e) {
             throw new RuntimeException(e);
         }
     }
