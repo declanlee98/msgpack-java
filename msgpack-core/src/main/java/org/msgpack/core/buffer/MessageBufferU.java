@@ -40,9 +40,9 @@ public class MessageBufferU
         this.wrap = bb.slice();
     }
 
-    private MessageBufferU(Object base, MemoryAddress address, int length, ByteBuffer wrap)
+    private MessageBufferU(Object base, MemoryAddress memoryAddress, int length, ByteBuffer wrap)
     {
-        super(base, address, length);
+        super(base, memoryAddress, length);
         this.wrap = wrap;
     }
 
@@ -57,7 +57,7 @@ public class MessageBufferU
             try {
                 wrap.position(offset);
                 wrap.limit(offset + length);
-                return new MessageBufferU(base, address + offset, length, wrap.slice());
+                return new MessageBufferU(base, memoryAddress.add(offset), length, wrap.slice());
             }
             finally {
                 resetBufferPosition();

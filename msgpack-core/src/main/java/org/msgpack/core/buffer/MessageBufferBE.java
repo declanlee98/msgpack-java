@@ -37,9 +37,9 @@ public class MessageBufferBE
         super(bb);
     }
 
-    private MessageBufferBE(Object base, MemoryAddress address, int length)
+    private MessageBufferBE(Object base, MemoryAddress memoryAddress, int length)
     {
-        super(base, address, length);
+        super(base, memoryAddress, length);
     }
 
     @Override
@@ -50,7 +50,7 @@ public class MessageBufferBE
         }
         else {
             checkArgument(offset + length <= size());
-            return new MessageBufferBE(base, address + offset, length);
+            return new MessageBufferBE(base, memoryAddress.add(offset), length);
         }
     }
 
