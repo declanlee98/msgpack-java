@@ -187,8 +187,6 @@ public class MessageBuffer
      */
     protected final long address;
 
-    protected MemoryAddress memoryAddress;
-
     /**
      * Size of the underlying memory
      */
@@ -354,7 +352,6 @@ public class MessageBuffer
     MessageBuffer(byte[] arr, int offset, int length)
     {
         this.base = arr;  // non-null is already checked at newMessageBuffer
-        this.memoryAddress = null;
         this.address = ARRAY_BYTE_BASE_OFFSET + offset;
         this.size = length;
         this.reference = null;
@@ -379,7 +376,6 @@ public class MessageBuffer
         }
         else if (bb.hasArray()) {
             this.base = bb.array();
-            this.memoryAddress = null;
             this.address = ARRAY_BYTE_BASE_OFFSET + bb.arrayOffset() + bb.position();
             this.size = bb.remaining();
             this.reference = null;
@@ -389,10 +385,9 @@ public class MessageBuffer
         }
     }
 
-    protected MessageBuffer(Object base, MemoryAddress memoryAddress, long address, int length)
+    protected MessageBuffer(Object base, long address, int length)
     {
         this.base = base;
-        this.memoryAddress = memoryAddress;
         this.address = address;
         this.size = length;
         this.reference = null;
@@ -419,13 +414,13 @@ public class MessageBuffer
         }
         else {
             checkArgument(offset + length <= size());
-            if (base == null) {
+            if (address == 0L) {
                 // if base is a direct buffer
-                return new MessageBuffer(base, memoryAddress.add(offset), address + offset, length);
+                return new MessageBuffer(((MemoryAddress) base).add(offset), address, length);
             }
             else {
                 // if base is a heaped buffer
-                return new MessageBuffer(base, memoryAddress, address + offset, length);
+                return new MessageBuffer(base, address + offset, length);
             }
         }
     }

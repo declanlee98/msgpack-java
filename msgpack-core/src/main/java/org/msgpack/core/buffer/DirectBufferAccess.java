@@ -18,7 +18,6 @@ package org.msgpack.core.buffer;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.lang.MemoryAddress;
 import java.nio.ByteBuffer;
 
 /**
